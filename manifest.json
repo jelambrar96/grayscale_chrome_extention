@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Grayscale Web",
+  "version": "1.0",
+  "description": "Converts all pages to grayscale.",
+  "permissions": ["activeTab"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Toggle Grayscale",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "48": "icon.png"
+  }
+}
